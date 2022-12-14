@@ -1,7 +1,7 @@
 package main
 
 import (
-	"HansOnGoRPC/calc"
+	calc "HansOnGoRPC/3_Clac/calc_http"
 	"net/http"
 	"net/rpc"
 )

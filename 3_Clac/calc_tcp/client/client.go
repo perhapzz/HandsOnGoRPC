@@ -1,7 +1,7 @@
 package main
 
 import (
-	"HansOnGoRPC/calc"
+	calc "HansOnGoRPC/3_Clac/calc_tcp"
 	"log"
 	"net/rpc"
 )
@@ -17,7 +17,7 @@ var _ calc.ServiceInterface = (*CalcClient)(nil)
 
 // DialCalcService dial CalcService
 func DialCalcService(network, address string) (*CalcClient, error) {
-	c, err := rpc.DialHTTP(network, address)
+	c, err := rpc.Dial(network, address)
 	if err != nil {
 		return nil, err
 	}
